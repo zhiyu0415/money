@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/pig"
         android:layout_width="248dp"
         android:layout_height="167dp"
         android:layout_marginStart="80dp"
