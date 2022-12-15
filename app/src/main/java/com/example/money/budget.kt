@@ -1,4 +1,12 @@
 package com.example.money
 
-class budget {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class budget : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.budget)
+    }
+
 }
