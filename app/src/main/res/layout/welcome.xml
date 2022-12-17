@@ -3,33 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:outlineAmbientShadowColor="#A98B73"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/pig"
+        android:id="@+id/pig2"
         android:layout_width="248dp"
         android:layout_height="167dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="83dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="91dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/piggy"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piggy" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/tv_welcome"
+        android:text="今天賺錢了嗎? "
         android:textColor="#876D5A"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="287dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
