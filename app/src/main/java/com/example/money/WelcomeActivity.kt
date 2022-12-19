@@ -11,17 +11,17 @@ class WelcomeActivity : Activity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome)
-        mHandler.sendEmptyMessageDelayed(GOTO_MAIN_ACTIVITY, 2000) //2秒跳轉
+        mHandler.sendEmptyMessageDelayed(GOTO_CALENDAR, 2000) //2秒跳轉
     }
 
     private val mHandler: Handler = @SuppressLint("HandlerLeak")
     object : Handler() {
         override fun handleMessage(msg: Message) {
             when (msg.what) {
-                GOTO_MAIN_ACTIVITY -> {
+                GOTO_CALENDAR -> {
                     val intent = Intent()
-                    //將原本Activity的換成MainActivity
-                    intent.setClass(this@WelcomeActivity, MainActivity::class.java)
+                    //將原本Activity的換成calendar
+                    intent.setClass(this@WelcomeActivity, Calendar::class.java)
                     startActivity(intent)
                     finish()
                 }
@@ -31,6 +31,6 @@ class WelcomeActivity : Activity() {
     }
 
     companion object {
-        private const val GOTO_MAIN_ACTIVITY = 0
+        private const val GOTO_CALENDAR = 0
     }
 }
