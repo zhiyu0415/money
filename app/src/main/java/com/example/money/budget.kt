@@ -32,12 +32,12 @@ class budget : AppCompatActivity() {
         val re = findViewById<Button>(R.id.re)
 
 
-        l1.setText((Integer.parseInt(b1.getText().toString())+Integer.parseInt(s1.getText().toString())))
-        l2.setText((Integer.parseInt(b2.getText().toString())+Integer.parseInt(s2.getText().toString())))
-        l3.setText((Integer.parseInt(b3.getText().toString())+Integer.parseInt(s3.getText().toString())))
-        l4.setText((Integer.parseInt(b4.getText().toString())+Integer.parseInt(s4.getText().toString())))
-        l5.setText((Integer.parseInt(b5.getText().toString())+Integer.parseInt(s5.getText().toString())))
-        ll.setText((Integer.parseInt(bb.getText().toString())+Integer.parseInt(ss.getText().toString())))
+        l1.setText((Integer.parseInt(b1.getText().toString())-Integer.parseInt(s1.getText().toString())))
+        l2.setText((Integer.parseInt(b2.getText().toString())-Integer.parseInt(s2.getText().toString())))
+        l3.setText((Integer.parseInt(b3.getText().toString())-Integer.parseInt(s3.getText().toString())))
+        l4.setText((Integer.parseInt(b4.getText().toString())-Integer.parseInt(s4.getText().toString())))
+        l5.setText((Integer.parseInt(b5.getText().toString())-Integer.parseInt(s5.getText().toString())))
+        ll.setText((Integer.parseInt(bb.getText().toString())-Integer.parseInt(ss.getText().toString())))
 
 
 
