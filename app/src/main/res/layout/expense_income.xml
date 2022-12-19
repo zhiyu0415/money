@@ -5,142 +5,198 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+        <Button
+            android:id="@+id/btn_expense"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="支出"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/btn_income"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="收入"
+            android:textSize="34sp" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_back"
-        android:layout_width="49dp"
-        android:layout_height="50dp"
-        android:text="<-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="<-回到月曆"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/checkBox_expense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:text="支出"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
-
-    <CheckBox
-        android:id="@+id/checkBox_income"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="收入"
-        android:textSize="34sp"
-        app:layout_constraintStart_toEndOf="@+id/checkBox_expense"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
-
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ed_money"
         android:layout_width="400dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="58dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="請輸入金額"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_income" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="400dp"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+        app:layout_constraintTop_toBottomOf="@+id/ed_money">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_food"
+        <CheckBox
+            android:id="@+id/checkBox_food"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="食" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_clothe"
+        <CheckBox
+            android:id="@+id/checkBox_clothe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="衣" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_live"
+        <CheckBox
+            android:id="@+id/checkBox_live"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="住" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_traffic"
+        <CheckBox
+            android:id="@+id/checkBox_traffic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="行" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_others"
+        <CheckBox
+            android:id="@+id/checkBox_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="其他" />
-    </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_accoutbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="帳冊:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="日期"
         app:layout_constraintStart_toEndOf="@+id/tv_accoutbook"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_accoutbook" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <EditText
         android:id="@+id/ed_date"
         android:layout_width="180dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="日期"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/ed_accountbook"
         app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
     <EditText
         android:id="@+id/ed_note"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="備忘"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_accountbook" />
+
+    <EditText
+        android:id="@+id/ed_accountbook"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="帳簿名稱"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_accoutbook" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/EIbtn_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="當月預算" />
+
+        <Button
+            android:id="@+id/EIbtn_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="收支分析" />
+
+        <Button
+            android:id="@+id/EIbtn_AA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AA制" />
+
+        <Button
+            android:id="@+id/EIbtn_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="當日匯率" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="儲存"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

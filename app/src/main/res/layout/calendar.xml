@@ -3,15 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <CalendarView
-        android:id="@+id/calendarView"
+        android:id="@+id/calendarView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:focusedMonthDateColor="#A98B73"
+        android:layerType="software"
+        android:weekNumberColor="#A98B73"
+        app:eventsEnabled="true"
+        app:headerColor="#876D5A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Today"
+        app:selectionColor="#876D5A"
+        app:selectionLabelColor="#FFFFFF"
+        app:todayLabelColor="#876D5A"
+        app:type="one_day_picker" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView2">
+
+        <Button
+            android:id="@+id/btn_EI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="支出收入" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支出分析" />
+
+        <Button
+            android:id="@+id/btn_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每月預算" />
+
+        <Button
+            android:id="@+id/btn_AA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AA制" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="回到今日"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日匯率"
+        app:layout_constraintStart_toEndOf="@+id/btn_Today"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
