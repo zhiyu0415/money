@@ -21,7 +21,7 @@ class WelcomeActivity : Activity() {
                 GOTO_CALENDAR -> {
                     val intent = Intent()
                     //將原本Activity的換成calendar
-                    intent.setClass(this@WelcomeActivity, Calendar::class.java)
+                    intent.setClass(this@WelcomeActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

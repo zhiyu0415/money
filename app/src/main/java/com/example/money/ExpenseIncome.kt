@@ -75,7 +75,7 @@ class ExpenseIncome  : AppCompatActivity() {
         }
         btn_back.setOnClickListener {
                 //跳轉至主餐頁，並傳送桌號
-                val intent = Intent(this, Calendar::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivityForResult(intent, 0)
         }
     }
