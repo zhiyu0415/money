@@ -59,5 +59,24 @@ class ExpenseIncome  : AppCompatActivity() {
             finish()
 
         }
+        btn_store.setOnClickListener {
+            //判斷是否輸入金額，日期，帳簿名稱
+            if (ed_money.length()<1||ed_date.length()<1||ed_accoutbook.length()<1){
+                ed_money.hint = "請輸入金額！"
+                ed_date.hint = "日期"
+                ed_accoutbook.hint = "帳簿名稱"
+            }
+
+            else {
+                //跳轉至主餐頁，並傳送桌號
+                val intent = Intent(this, ExpenseIncome::class.java)
+                startActivityForResult(intent, 0)
+            }
         }
+        btn_back.setOnClickListener {
+                //跳轉至主餐頁，並傳送桌號
+                val intent = Intent(this, Calendar::class.java)
+                startActivityForResult(intent, 0)
+        }
+    }
 }
