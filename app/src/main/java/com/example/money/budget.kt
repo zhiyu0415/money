@@ -1,15 +1,22 @@
 package com.example.money
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class budget : AppCompatActivity() {
+class budget(intent: Intent, requestCode: Any?) : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.budget)
+
+        findViewById<Button>(R.id.re).setOnClickListener{
+            val intent = Intent(this,change::class.java)
+            budget(intent,1)
+        }
+
 
         val bb = findViewById<TextView>(R.id.bb)
         val ss = findViewById<TextView>(R.id.ss)
@@ -30,6 +37,7 @@ class budget : AppCompatActivity() {
         val l4 = findViewById<TextView>(R.id.l4)
         val l5 = findViewById<TextView>(R.id.l5)
         val re = findViewById<Button>(R.id.re)
+
 
 
         l1.setText((Integer.parseInt(b1.getText().toString())-Integer.parseInt(s1.getText().toString())))
